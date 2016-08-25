@@ -1,5 +1,9 @@
 extends layout
 
+
 block content
+  script(src="js/twitter.js")
   h1= title
   p Welcome to #{title}
+  button(class="btn", onclick='getTweet()').
+   Be Awesome
