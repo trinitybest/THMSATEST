@@ -42,7 +42,7 @@ app.post('/LEDon', function(req, res) {
     // Run your LED toggling code here
 });
 
-app.listen(port);
+
 
 
 /// catch 404 and forward to error handler
@@ -81,3 +81,6 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+app.listen(port);
+
+console.log('Magic happens on port ' + port);
