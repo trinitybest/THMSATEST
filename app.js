@@ -36,12 +36,13 @@ app.use('/users', users);
 //app.use('/getTweet', getTweet);
 
 //**************************************
+var port = process.env.PORT || 3000;
 app.post('/LEDon', function(req, res) {
     console.log('LEDon button pressed!');
     // Run your LED toggling code here
 });
 
-//app.listen(1337);
+app.listen(port);
 
 
 /// catch 404 and forward to error handler
