@@ -1,7 +1,8 @@
 
 extends ../node_modules/jade-bootstrap/layouts/cover
 append styles
-	link(href="/jade-bootstrap/css/cover.css", rel="stylesheet")
+	//link(href="/jade-bootstrap/css/cover.css", rel="stylesheet")
+	link(href="/public/css/cover.css", rel="stylesheet")
 append scripts
 	script(src="/public/ts/Facebook.js")
 block body
@@ -16,20 +17,25 @@ block body
 							ul.nav.masthead-nav
 								li.active 
 									a(href="#") Home
-								li
+								//li
 									a(href="#") Features
 								li
 									a(href="#") Contact
-				.inner.cover
-					h1.cover-heading Cover your page.
+								li
+									.fb-login-button(data-max-rows='1', data-size='large', data-show-faces='false', data-auto-logout-link='true', scope='public_profile,email,user_posts', onlogin='checkLoginState();')
+				div
+					h1.cover-heading 1. Please login using Facebook.
 					//p.lead Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
 						p.lead
 						a(href="#", class="btn btn-lg btn-default") Learn more
-					.fb-login-button(data-max-rows='1', data-size='large', data-show-faces='true', data-auto-logout-link='true', scope='public_profile,email,user_posts', onlogin='checkLoginState();')
-					p Click the button below to trigger a Share Dialog
+					//.fb-login-button(data-max-rows='1', data-size='large', data-show-faces='true', data-auto-logout-link='true', scope='public_profile,email,user_posts', onlogin='checkLoginState();')
+					hr
+					p 2. Click the button below to trigger a Share Dialog
 					#shareBtn.btn.btn-success.clearfix(onclick='shareFB();') Share
-					.fb-comments(data-href='http://thmsa.azurewebsites.net/', data-numposts='5')
+					hr
+					p 3. Get your latest posts using Facebook API
 					button#CM(onclick='CM()') Click Me!
 				.mastfoot
-					.inner
+					//.inner
 						p Cover template for <a href="http://getbootstrap.com">Bootstrap </a>, by <a href="https://twitter.com/mdo">@mdo</a>.
+					.fb-comments(data-href='http://thmsa.azurewebsites.net/', data-numposts='5')

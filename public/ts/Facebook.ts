@@ -22,6 +22,10 @@ function CM(){
         if (response && !response.error) {
           /* handle the result */
           console.log(response);
+          response.forEach(function(post){
+              console.log(post.created_time);
+              console.log(post.story);
+          });
         }
       }
   );
