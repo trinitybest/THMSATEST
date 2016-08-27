@@ -3,8 +3,18 @@ var app = require('../app');
 
 app.set('port', process.env.PORT || 3000);
 
+//**************************************
+
+app.post('/LEDon', function(req, res) {
+    console.log('LEDon button pressed!');
+    // Run your LED toggling code here
+});
+
+
 var server = app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + server.address().port);
 });
+
+server;
 
 

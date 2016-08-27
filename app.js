@@ -35,12 +35,6 @@ app.use('/', routes);
 app.use('/users', users);
 //app.use('/getTweet', getTweet);
 
-//**************************************
-var port = process.env.PORT || 3000;
-app.post('/LEDon', function(req, res) {
-    console.log('LEDon button pressed!');
-    // Run your LED toggling code here
-});
 
 
 
