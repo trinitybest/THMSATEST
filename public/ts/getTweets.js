@@ -12,6 +12,7 @@ function getTweets() {
         url: 'http://thmsa.azurewebsites.net/LEDon'
     });
 }
+;
 function postTweets() {
     console.log("getTweets");
     $.ajax({
@@ -19,3 +20,4 @@ function postTweets() {
         url: 'http://thmsa.azurewebsites.net/LEDon'
     });
 }
+;
