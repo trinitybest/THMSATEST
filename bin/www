@@ -4,8 +4,8 @@ var app = require('../app');
 app.set('port', process.env.PORT || 3000);
 
 //**************************************
-
-app.get('/LEDon', function(req, res){
+/*
+app.get('http://thmsa.azurewebsites.net/users', function(req, res){
     res.send('hello world');
 });
 
@@ -13,7 +13,7 @@ app.post('/LEDon', function(req, res) {
     console.log('LEDon button pressed!');
     // Run your LED toggling code here
 });
-
+*/
 
 /*var server = app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + server.address().port);
