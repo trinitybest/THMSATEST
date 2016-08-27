@@ -81,6 +81,6 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-app.listen(port);
+//app.listen(port);
 
-console.log('Magic happens on port ' + port);
+//console.log('Magic happens on port ' + port);
