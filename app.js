@@ -30,6 +30,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// use jade-bootstrap
+app.use('/jade-bootstrap', express.static(path.join(__dirname, 'node_modules/jade-bootstrap/')))
 
 app.use('/', routes);
 app.use('/users', users);
