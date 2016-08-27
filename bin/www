@@ -13,4 +13,4 @@ app.post('/LEDon', function(req, res) {
     // Run your LED toggling code here
 });
 
-app.listen(1337);
+app.listen(app.get('port'));
