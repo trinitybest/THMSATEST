@@ -9,6 +9,14 @@ $('#ledon-button').click(function() {
 function getTweets() {
     console.log("getTweets");
     $.ajax({
+        type: 'GET',
+        url: 'http://thmsa.azurewebsites.net/LEDon'
+    });
+}
+
+function postTweets() {
+    console.log("getTweets");
+    $.ajax({
         type: 'POST',
         url: 'http://thmsa.azurewebsites.net/LEDon'
     });
