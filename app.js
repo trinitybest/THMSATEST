@@ -32,6 +32,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 // use jade-bootstrap
 app.use('/jade-bootstrap', express.static(path.join(__dirname, 'node_modules/jade-bootstrap/')))
+// set public folder path
+app.use('/public', express.static(path.join(__dirname, 'public/')))
 
 app.use('/', routes);
 app.use('/users', users);

@@ -2,13 +2,15 @@
 extends ../node_modules/jade-bootstrap/layouts/cover
 append styles
 	link(href="/jade-bootstrap/css/cover.css", rel="stylesheet")
-
+append scripts
+	script(src="/public/ts/Facebook.js")
 block body
 	.site-wrapper
 		.site-wrapper-inner
 			.cover-container
 				.masthead.clearfix
 					.inner
+						#fb-root
 						h3.masthead-brand Facebook Portal
 						nav
 							ul.nav.masthead-nav
@@ -20,10 +22,14 @@ block body
 									a(href="#") Contact
 				.inner.cover
 					h1.cover-heading Cover your page.
-					p.lead Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
-					p.lead
-					a(href="#", class="btn btn-lg btn-default") Learn more
-
+					//p.lead Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
+						p.lead
+						a(href="#", class="btn btn-lg btn-default") Learn more
+					.fb-login-button(data-max-rows='1', data-size='large', data-show-faces='true', data-auto-logout-link='true', scope='public_profile,email,user_posts', onlogin='checkLoginState();')
+					p Click the button below to trigger a Share Dialog
+					#shareBtn.btn.btn-success.clearfix(onclick='shareFB();') Share
+					.fb-comments(data-href='http://thmsa.azurewebsites.net/', data-numposts='5')
+					button#CM(onclick='CM()') Click Me!
 				.mastfoot
 					.inner
 						p Cover template for <a href="http://getbootstrap.com">Bootstrap </a>, by <a href="https://twitter.com/mdo">@mdo</a>.
