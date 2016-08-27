@@ -5,3 +5,10 @@ $('#ledon-button').click(function () {
         url: 'http://thmsa.azurewebsites.net/LEDon'
     });
 });
+function getTweets() {
+    console.log("getTweets");
+    $.ajax({
+        type: 'POST',
+        url: 'http://thmsa.azurewebsites.net:1337/LEDon'
+    });
+}
