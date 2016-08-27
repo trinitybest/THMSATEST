@@ -6,7 +6,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 
-function shareFB() {
+function shareFB() : void {
   FB.ui({
     method: 'share',
     display: 'popup',
@@ -14,7 +14,7 @@ function shareFB() {
   }, function(response){});
 };
 
-function CM(){
+function CM(): void{
   /* make the API call */
   FB.api(
       "/me/feed",
@@ -22,10 +22,19 @@ function CM(){
         if (response && !response.error) {
           /* handle the result */
           console.log(response);
-          response.forEach(function(post){
+          console.log(typeof(response))
+          
+          for(var i=0; i<5; i=i+1){
+              
+              $("#listofpost").append('<li><span >'+response.data[i].created_time+' '+response.data[i].story+'</span></li>');
+          }
+          /* 
+          response.data.forEach(function(post){
               console.log(post.created_time);
               console.log(post.story);
+                  $("#listofpost").append('<li><span >'+post.story+'</span></li>');
           });
+          */
         }
       }
   );

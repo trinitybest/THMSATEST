@@ -21,10 +21,10 @@ function CM() {
         if (response && !response.error) {
             /* handle the result */
             console.log(response);
-            response.forEach(function (post) {
-                console.log(post.created_time);
-                console.log(post.story);
-            });
+            console.log(typeof (response));
+            for (var i = 0; i < 5; i = i + 1) {
+                $("#listofpost").append('<li><span >' + response.data[i].created_time + ' ' + response.data[i].story + '</span></li>');
+            }
         }
     });
 }

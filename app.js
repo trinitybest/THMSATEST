@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/user');
+var post = require('./routes/post')
 //var getTweet = require('./routes/getTweet');
 
 var app = express();
@@ -37,6 +38,7 @@ app.use('/public', express.static(path.join(__dirname, 'public/')))
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/post', post)
 //app.use('/getTweet', getTweet);
 
 
