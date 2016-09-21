@@ -6,6 +6,7 @@ append styles
 append scripts
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js")
 	script(src="/public/ts/Facebook.js")
+	script(src="/public/ts/Facebook2.js")
 block body
 	.site-wrapper
 		.site-wrapper-inner
@@ -34,8 +35,9 @@ block body
 					p 2. Click the button below to trigger a Share Dialog
 					#shareBtn.btn.btn-success.clearfix(onclick='shareFB();') Share
 					hr
-					p 3. Get your latest posts using Facebook API
-					button#CM(class="btn btn-info", onclick='CM()') Click Me!
+					//p 3. Get your latest posts using Facebook API
+					p 3. Get your name and id using Facebook API
+					button#CM(class="btn btn-info", onclick='CM2()') Click Me!
 					ul#listofpost
 				.mastfoot
 					//.inner
