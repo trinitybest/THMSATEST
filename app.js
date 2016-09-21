@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/user');
+var post = require('./routes/post')
 //var getTweet = require('./routes/getTweet');
 
 var app = express();
@@ -30,10 +31,19 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+// use jade-bootstrap
+app.use('/jade-bootstrap', express.static(path.join(__dirname, 'node_modules/jade-bootstrap/')))
+// set public folder path
+app.use('/public', express.static(path.join(__dirname, 'public/')))
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/post', post)
 //app.use('/getTweet', getTweet);
+
+
+
+
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -71,3 +81,6 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
+//app.listen(port);
+
+//console.log('Magic happens on port ' + port);
